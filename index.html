@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 
-<title>TinyGo - Gophercon EU 2023</title>
+<title>TinyGo - Gophercon 2023</title>
 
 <meta name="description" content="TinyGo">
 <meta name="author" content="Ron Evans">
@@ -40,7 +40,7 @@
 		<section>
 			<section>
 				<h1>A Small Update On TinyGo</h1>
-				<h2>Gophercon EU 2023 Edition</h2>
+				<h2>Gophercon 2023 Edition</h2>
 				<h2>Ron Evans - @deadprogram</h2>
 			</section>
 		</section>
@@ -61,7 +61,7 @@
 		</section>
 
 		<section>
-			<h1>Technologists<br><u>For Hire</u></h1>
+			<h1>Software that makes your hardware work</h1>
 		</section>
 	
 		<section>
@@ -81,11 +81,11 @@
 			</section>
 
 			<section>
-				<h2>13k stars</h2>
+				<h2>13k+ stars</h2>
 			</section>
 
 			<section>
-				<h2>753 forks</h2>
+				<h2>780+ forks</h2>
 			</section>
 
 			<section>
@@ -93,45 +93,95 @@
 			</section>
 
 			<section>
-				<h2>94 different boards supported</h2>
+				<h2>99 different boards supported</h2>
 			</section>
 		</section>
 
 		<section>
 			<section>
-				<h2>TinyGo Release 0.28.1 Highlights</h2>
+				<h2>TinyGo Release 0.30 Highlights</h2>
 			</section>
 
 			<section>
-				<h2>300+ commits</h2>
+				<h2>LLVM 16</h2>
 			</section>
 
 			<section>
-				<h2>Reflection!</h2>
+				<h2>More reflection!</h2>
 			</section>
 
 			<section>
-				<code>encoding/json</code>
-			</section>
-
-			<section>
-				<code>//go:wasmimport</code>
+				<code>GOOS=wasip1 GOARCH=wasm</code>
 			</section>
 		</section>
 
 		<section>
 			<section>
-				<h2>Now that "Big Go" will support wasi, do we still need TinyGo?</h2>
+				<h2>Now that "Big Go" supports wasi, do we still need TinyGo?</h2>
+			</section>
+			<section>
+				<pre><code class="golang">
+package main
+
+func main() {
+	println("Hello world!")
+}
+				</code></pre>
+				<h3>hello.go</h3>
 			</section>
 			<section>
 				<code>
-1288826 jun 29 12:28 helloworld-go1.21rc2
+1389512 sep 28 06:43 hello-min-go-1.21.1.wasm
 				</code>
 			</section>
 			<section>
 				<code>
-93688 jun 29 12:29 helloworld-tinygo-0.28.1
+81199 sep 28 06:43 hello-min-tinygo-0.30.wasm
 				</code>
+			</section>
+			<section>
+				<h2>
+17x smaller
+				</h2>
+			</section>
+
+			<section>
+				<pre><code class="golang">
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+)
+
+func main() {
+	fmt.Println("Hello world!")
+
+	helloWorldAsBytes := []byte("Hello world!\n")
+
+	err := ioutil.WriteFile("./helloworld.txt", helloWorldAsBytes, 0644)
+	if err != nil {
+		panic(err)
+	}
+}										
+				</code></pre>
+				<h3>hello-wasi.go</h3>
+				<h4>wasmbyexample.dev</h4>
+			</section>
+			<section>
+				<code>
+2157722 sep 28 06:44 hello-wasi-go-1.21.1.wasm
+				</code>
+			</section>
+			<section>
+				<code>
+414176 sep 28 06:44 hello-wasi-tinygo-0.30.wasm
+				</code>
+			</section>
+			<section>
+				<h2>
+5.2x smaller
+				</h2>
 			</section>
 		</section>
 
@@ -179,21 +229,6 @@
 		</section>
 
 		<section>
-			<h2>Embedded Systems 101: SX1278 LoRa, Datasheets & SPI connection with TinyGo</h2>
-			<h3>Patricio Whittingslow</h3>
-			<h3><a href="https://www.youtube.com/watch?v=_5XgtYkq2eo">youtube.com/watch?v=_5XgtYkq2eo</a></h3>
-		</section>
-
-		<section>
-			<div class="image-container">
-				<img src="./images/firewatch-sensor.png">
-			</div>
-			<h3>Firewatch - LoRa fire detection system</h3>
-			<h3>Manolo Evans</h3>
-			<h3><a href="https://github.com/ManoloEvans/firewatch-sensor">github.com/ManoloEvans/firewatch-sensor</a></h3>
-		</section>	
-
-		<section>
 			<section>
 				<h3>Performance Evaluation of C/C++, MicroPython, Rust and TinyGo Programming Languages on ESP32 Microcontroller</h3>
 				<h3>Department of Computer Sciences, Kaunas University of Technology, Lithuania</h3>
@@ -220,9 +255,9 @@
 		</section>
 
 		<section>
-			<h2>Spin in ThoughtWorks Radar</h2>
+			<h2>Spin 1.5</h2>
 			<h3>Fermyon</h3>
-			<h3><a href="https://www.thoughtworks.com/en-es/radar/platforms/spin">thoughtworks.com/en-es/radar/platforms/spin</a></h3>
+			<h3><a href="https://developer.fermyon.com/spin/index">developer.fermyon.com/spin</a></h3>
 		</section>
 
 		<section>
@@ -238,33 +273,49 @@
 		</section>
 
 		<section>
-			<h2>Capsule</h2>
-			<h3>Philippe Charriere (@k33g_org)</h3>
-			<h3><a href="https://github.com/bots-garden/capsule">github.com/bots-garden/capsule</a></h3>
-		</section>
-
-		<section>
-			<h2>wzprof</h2>
+			<h2>Timecraft</h2>
 			<h3>Stealth Rocket</h3>
-			<h3><a href="https://github.com/stealthrocket/wzprof">github.com/stealthrocket/wzprof</a></h3>
-		</section>
-
-		<section>
-			<div class="image-container">
-				<img src="./images/kubernetes-logo.png">
-			</div>
-			<h3>kube scheduler WASM extension</h3>
-			<h3><a href="https://github.com/kubernetes-sigs/kube-scheduler-wasm-extension">github.com/kubernetes-sigs/kube-scheduler-wasm-extension</a></h3>
+			<h3><a href="https://docs.timecraft.dev/">docs.timecraft.dev</a></h3>
 		</section>
 
 		<section>
 			<section>
-				<h2>earring-rings</h2>
-				<h3>Ayke van Laëthem</h3>
-				<h3><a href="https://github.com/aykevl/things">https://github.com/aykevl/things</a></h3>
+				<div class="image-container">
+				<img src="./images/kubernetes-logo.png">
+				</div>
+				<h3>kube scheduler WASM extension</h3>
+				<h3><a href="https://github.com/kubernetes-sigs/kube-scheduler-wasm-extension">github.com/kubernetes-sigs/kube-scheduler-wasm-extension</a></h3>
 			</section>
-			<section data-background-image="./images/earrings.gif">
+			<section>
+				<h2>Performance</h2>
+				<blockquote>
+					Q: Why do we use TinyGo instead of normal Go?
+					
+					A: We found re-creating an instance per hook costs 45us in TinyGo, yet over 4ms in
+Go.
+				</blockquote>
 			</section>
+		</section>
+
+		<section>
+			<h2>Back to the hardware</h2>
+		</section>
+
+		<section>
+			<section>
+				<h2>TinyGlobo 1/2</h2>
+				<h3>tinyglobo.com</h3>
+			</section>
+			<section>
+				<div class="image-container">
+				  <img src="./images/hackaday-tinyglobo.png">
+				</div>
+			</section>	  
+			<section>
+				<div class="image-container">
+				  <img src="./images/tinyglobo2-flight.jpg">
+				</div>
+			</section>	  
 		</section>
 
 		<section>
@@ -282,26 +333,49 @@
 
 		<section>
 			<section>
-				<h2>Gophercon EU Hardware Hack Session</h2>
-			</section>
-			<section data-background-image="./images/hacksession.jpg">
+				<h2>TinyGo at Gophercon 2023</h2>
 			</section>
 		</section>
 
 		<section>
 			<section>
-				<h2>TinyGlobo 2</h2>
-				<h3>tinyglobo.com</h3>
+				<h2>Hardware Hack Session</h2>
+				<h3>Community Day</h3>
 			</section>
+		</section>
+
+		<section>
 			<section>
-				<div class="image-container">
-				  <img src="./images/tinyglobo2-flight.jpg">
-				</div>
-			</section>	  
+				<h2>"Using Go to Track Satellites in the Sky"</h2>
+				<h3>Pablo Canseco</h3>
+			</section>
+			<section data-background-image="./images/tinygo-sat-tracking.jpg">
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>"Special When Lit: Using Go to Bring a Pinball Machine Back to Life!"</h2>
+				<h3>Jeremy Fleitz</h3>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>"Freeze: A TinyGo-Powered Meeting Muter with a Twist"</h2>
+				<h3>Hari Bhaskaran</h3>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>You are here</h2>
+			</section>
 		</section>
 
 		<section>
 			<h2>@TinyGolang</h2>
+			<h2>@TinyGo@mastodon.social</h2>
 		</section>
 
 		<section>
@@ -337,12 +411,6 @@
 		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
 		// parallaxBackgroundSize: '2100px 900px',
 
-		leap: {
-		  naturalSwipe   : true,    // Invert swipe gestures
-		  pointerOpacity : 0.5,      // Set pointer opacity to 0.5
-		  pointerColor   : '#d80000' // Red pointer
-		},
-
 		// Optional libraries used to extend on reveal.js
 		dependencies: [
 		  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -351,7 +419,6 @@
 		  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 		  { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 		  { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-		  { src: 'plugin/leap/leap.js', async: true }
 		]
 	  });
 
