@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 
-<title>TinyGo - Gophercon 2023</title>
+<title>TinyGo - GopherconEU 2024</title>
 
 <meta name="description" content="TinyGo">
 <meta name="author" content="Ron Evans">
@@ -40,7 +40,7 @@
 		<section>
 			<section>
 				<h1>A Small Update On TinyGo</h1>
-				<h2>Gophercon 2023 Edition</h2>
+				<h2>Gophercon.EU 2024 Edition</h2>
 				<h2>Ron Evans - @deadprogram</h2>
 			</section>
 		</section>
@@ -81,43 +81,52 @@
 			</section>
 
 			<section>
-				<h2>13k+ stars</h2>
+				<h2>14k+ stars</h2>
 			</section>
 
 			<section>
-				<h2>780+ forks</h2>
+				<h2>850+ forks</h2>
 			</section>
 
 			<section>
-				<h2>150+ contributors</h2>
+				<h2>200+ contributors</h2>
 			</section>
 
 			<section>
-				<h2>99 different boards supported</h2>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>TinyGo Release 0.30 Highlights</h2>
+				<h2>Over 100 different boards supported</h2>
 			</section>
 
 			<section>
-				<h2>LLVM 16</h2>
-			</section>
-
-			<section>
-				<h2>More reflection!</h2>
-			</section>
-
-			<section>
-				<code>GOOS=wasip1 GOARCH=wasm</code>
+				<h2>Over 100 different sensors/displays/wireless devices/actuators supported</h2>
 			</section>
 		</section>
 
 		<section>
 			<section>
-				<h2>Now that "Big Go" supports wasi, do we still need TinyGo?</h2>
+				<h2>TinyGo Release 0.32 Highlights</h2>
+			</section>
+
+			<section>
+				<h2>LLVM 18</h2>
+			</section>
+
+			<section>
+				<h2>Patch for race condition in Big Go 'go/ssa' package</h2>
+			</section>
+
+			<section>
+				<h2>Bluetooth support for the RP2040-W</h2>
+			</section>
+
+			<section>
+				<h2>More WASM improvments</h2>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Weighing In</h2>
+				<h3>Binary sizes for latest "Big Go" (1.22.4) and TinyGo (0.32)</h3>
 			</section>
 			<section>
 				<pre><code class="golang">
@@ -131,12 +140,12 @@ func main() {
 			</section>
 			<section>
 				<code>
-1389512 sep 28 06:43 hello-min-go-1.21.1.wasm
+1467672 jun 16 10:03 hello-min-go-1.22.4.wasm
 				</code>
 			</section>
 			<section>
 				<code>
-81199 sep 28 06:43 hello-min-tinygo-0.30.wasm
+84709 jun 16 10:07 hello-min-tinygo-0.32.0-dev.wasm
 				</code>
 			</section>
 			<section>
@@ -170,18 +179,34 @@ func main() {
 			</section>
 			<section>
 				<code>
-2157722 sep 28 06:44 hello-wasi-go-1.21.1.wasm
+2237624 jun 16 10:11 hello-wasi-go-1.22.4.wasm
 				</code>
 			</section>
 			<section>
 				<code>
-414176 sep 28 06:44 hello-wasi-tinygo-0.30.wasm
+412416 jun 16 10:11 hello-wasi-tinygo-0.32.0-dev.wasm
 				</code>
 			</section>
 			<section>
 				<h2>
-5.2x smaller
+5.4x smaller
 				</h2>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>New Ways To Explore TinyGo</h2>
+			</section>	
+
+			<section>
+				<h2>TinyGo Playground</h2>
+				<h3><a href="https://play.tinygo.org/" target="_blank">play.tinygo.org</a></h3>
+			</section>
+
+			<section>
+				<h2>TinyGo Tour</h2>
+				<h3><a href="https://tinygo.org/tour" target="_blank">tinygo.org/tour</a></h3>
 			</section>
 		</section>
 
@@ -191,59 +216,68 @@ func main() {
 
 		<section>
 			<section>
-				<h2>TinyGo Keyboard</h2>
-				<h3>Takasago (@sago35)</h3>
-				<h3><a href="https://github.com/sago35/tinygo-keyboard">github.com/sago35/tinygo-keyboard</a></h3>
-			</section>
-			<section data-background-image="./images/tinygo-keyboard.gif">
-			</section>
-
-			<section>
 				<div class="image-container">
-					<img src="./images/tinygo-keyboard-workshop.png">
+					<img src="./images/tinygo-petit.jpg">
 				</div>
-				<h3>Umeda.go - TinyGo Keyboard Workshop</h3>
-				<h3><a href="https://sago35.hatenablog.com/entry/2023/05/18/225618">sago35.hatenablog.com/entry/2023/05/18/225618</a></h3>
+				<h2>TinyGo - Petit Mais Costaud</h2>
+				<h3>Aurélie Vache (@aurelievache) & Thierry Chantier (@titimoby)</h3>
+				<h3><a href="https://noti.st/titimoby/2gN0IZ/tinygo-petit-mais-costaud#sDEl0KG">Touraine Tech - Feb 2024 - Tours, France</a></h3>
 			</section>	
 		</section>
 
 		<section>
-			<div class="image-container">
-				<img src="./images/u-root-logo.png">
-			</div>
-			<h3>u-root</h3>
-			<h3><a href="https://github.com/u-root/u-root">github.com/u-root/u-root</a></h3>
+			<section>
+				<div class="image-container">
+					<img src="./images/takasago-keyboard.jpg">
+				</div>
+				<h2>TinyGo Keyboard</h2>
+				<h3>Takasago (@sago35)</h3>
+				<h3><a href="https://github.com/sago35/tinygo-keyboard">github.com/sago35/tinygo-keyboard</a></h3>
+			</section>
+			<section>
+				<div class="image-container">
+					<img src="./images/sago35-goconf-japan.jpg">
+				</div>
+				<h2>Go Conference 2024 - Jun 2024 - Shibuya, Japan</h2>
+				<h3><a href="https://gocon.jp/2024/">gocon.jp/2024/</a></h3>
+			</section>
+
+			<section data-background-image="./images/gopher-kun-board.gif">
+			</section>
 		</section>
 
 		<section>
 			<section>
 				<div class="image-container">
-					<img src="./images/rc-airplane.jpg">
+					<img src="./images/zegl-cosmic-unicorn.png">
 				</div>
-				<h3>FPV head tracker</h3>
-				<h3>Yurii Soldak</h3>
-				<h3><a href="https://github.com/ysoldak/HeadTracker">github.com/ysoldak/HeadTracker</a></h3>
-			</section>
-			<section data-background-image="./images/sight.gif">
+				<h2>TinyGo Cosmic Unicorn</h2>
+				<h3>Gustav Westling (@zegl)</h3>
+				<h3><a href="https://github.com/zegl/go-cosmic-unicorn">github.com/zegl/go-cosmic-unicorn</a></h3>
 			</section>
 		</section>
 
 		<section>
 			<section>
-				<h3>Performance Evaluation of C/C++, MicroPython, Rust and TinyGo Programming Languages on ESP32 Microcontroller</h3>
-				<h3>Department of Computer Sciences, Kaunas University of Technology, Lithuania</h3>
-				<h3><a href="https://www.mdpi.com/2079-9292/12/1/143">www.mdpi.com/2079-9292/12/1/143</a></h3>
+				<div class="image-container">
+					<img src="./images/raspberrypi-pico-logo.webp">
+				</div>
+				<h2>TinyGo in official Raspberry Pi Pico SDK</h2>
+				<h3>Patricio Wittingslow (@soypat) & Ken Bell (@kenbell)</h3>
+				<h3><a href="https://github.com/raspberrypi/pico-sdk/pull/1604">github.com/raspberrypi/pico-sdk/pull/1604</a></h3>
+				<h3><a href="https://github.com/tinygo-org/pio">github.com/tinygo-org/pio</a></h3>
 			</section>
-			<section>
-				<blockquote>
-					The results of this study reveal that, though the C/C++ programming language is widely believed to be the most efficient for embedded programming, that is not always the case....in a few cases the C/C++ algorithms were outperformed by algorithms implemented in TinyGo and Rust. Moreover, the TinyGo algorithms demonstrated jitter-free execution, making this language more preferable for hard real-time applications.
-				</blockquote>
+
+			<section data-background-image="./images/piohub75.gif">
 			</section>
-		</section>	
+		</section>
 
 		<section>
+			<div class="image-container">
+				<img src="./images/webassembly-logo.png">
+			</div>
 			<h2>Webassembly</h2>
-			<h3>WASI</h3>
+			<h3>wasm, wasi, and wasm-unknown</h3>
 		</section>
 
 		<section>
@@ -255,122 +289,92 @@ func main() {
 		</section>
 
 		<section>
-			<h2>Spin 1.5</h2>
-			<h3>Fermyon</h3>
-			<h3><a href="https://developer.fermyon.com/spin/index">developer.fermyon.com/spin</a></h3>
+			<div class="image-container">
+				<img src="./images/fermyon-logo.png">
+			</div>
+			<h3>Fermyon Spin 2.0 + SpinKube</h3>
+			<h3><a href="https://developer.fermyon.com/">developer.fermyon.com</a></h3>
 		</section>
 
 		<section>
-			<h2>Higress - Next-generation Cloud Native Gateway | 下一代云原生网关</h2>
-			<h3>AliBaba</h3>
-			<h3><a href="https://github.com/alibaba/higress/">github.com/alibaba/higress/</a></h3>
+			<div class="image-container">
+				<img src="./images/aqua-logo.png">
+			</div>
+			<h3>Trivy</h3>
+			<h3><a href="https://aquasecurity.github.io/trivy/v0.52/docs/advanced/modules/#tinygo">aquasecurity.github.io/trivy/v0.52/docs/advanced/modules/#tinygo</a></h3>
 		</section>
 
 		<section>
-			<h2>wazero</h2>
+			<div class="image-container">
+				<img src="./images/wazero-logo.png">
+			</div>
 			<h3>Tetrate Labs</h3>
 			<h3><a href="https://wazero.io/">wazero.io</a></h3>
 		</section>
 
 		<section>
-			<h2>Timecraft</h2>
-			<h3>Stealth Rocket</h3>
-			<h3><a href="https://docs.timecraft.dev/">docs.timecraft.dev</a></h3>
-		</section>
-
-		<section>
 			<section>
 				<div class="image-container">
-				<img src="./images/kubernetes-logo.png">
+					<img src="./images/mechanoid-logo.png">
 				</div>
-				<h3>kube scheduler WASM extension</h3>
-				<h3><a href="https://github.com/kubernetes-sigs/kube-scheduler-wasm-extension">github.com/kubernetes-sigs/kube-scheduler-wasm-extension</a></h3>
+				<h3>Mechanoid</h3>
+				<h3><a href="https://mechanoid.io">mechanoid.io</a></h3>
 			</section>
-			<section>
-				<h2>Performance</h2>
-				<blockquote>
-					Q: Why do we use TinyGo instead of normal Go?
-					
-					A: We found re-creating an instance per hook costs 45us in TinyGo, yet over 4ms in
-Go.
-				</blockquote>
-			</section>
-		</section>
 
-		<section>
-			<h2>Back to the hardware</h2>
-		</section>
-
-		<section>
-			<section>
-				<h2>TinyGlobo 1/2</h2>
-				<h3>tinyglobo.com</h3>
-			</section>
 			<section>
 				<div class="image-container">
-				  <img src="./images/hackaday-tinyglobo.png">
+					<img src="./images/wasmdrone.gif">
 				</div>
-			</section>	  
+				<h2>WASM controlled drone flight running on conference badge using Mechanoid</h2>
+				<h3>WASM-IO Conference - Mar 2024 - Barcelona, Spain</h3>
+				<h3><a href="https://wasmio.tech/">wasmio.tech</a></h3>
+			</section>
+
+			<section data-background-image="./images/wasmdrone.gif">
+			</section>
+
 			<section>
 				<div class="image-container">
-				  <img src="./images/tinyglobo2-flight.jpg">
+					<img src="./images/mechanoidinfoworld.png">
 				</div>
-			</section>	  
+				<h2>"Mechanoid brings Wasm to embedded systems and IoT"</h2>
+				<h3>Paul Krill (@pjkrill) - Mar 2024</h3>
+				<h3><a href="https://www.infoworld.com/article/3714347/mechanoid-brings-wasm-to-embedded-systems-and-iot.html">infoworld.com</a></h3>
+			</section>	
+
+			<section>
+				<div class="image-container">
+					<img src="./images/thenewstack-mechanoid.png">
+				</div>
+				<h2>"4 Big Developments in WebAssembly"</h2>
+				<h3>Matt Butcher (@technosophos) - Apr 2024</h3>
+				<h3><a href="https://thenewstack.io/4-big-developments-in-webassembly/">thenewstack.io</a></h3>
+			</section>	
 		</section>
 
 		<section>
 			<section>
-				<h2>Gopher Badge</h2>
-				<h3>Daniel Esteban (@_CONEJO)</h3>
-				<h3><a href="https://gopherbadge.com/">gopherbadge.com/</a></h3>
-			</section>
-			<section>
-				<div class="image-container">
-					<img src="./images/gopherbadge.webp">
-				</div>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>TinyGo at Gophercon 2023</h2>
+				<h2>TinyGo at Gophercon EU 2024</h2>
 			</section>
 		</section>
 
 		<section>
 			<section>
 				<h2>Hardware Hack Session</h2>
-				<h3>Community Day</h3>
+				<h3>Workshop Day</h3>
+			</section>
+
+			<section data-background-image="./images/somethinghere.png">
 			</section>
 		</section>
 
 		<section>
-			<section>
-				<h2>"Using Go to Track Satellites in the Sky"</h2>
-				<h3>Pablo Canseco</h3>
-			</section>
-			<section data-background-image="./images/tinygo-sat-tracking.jpg">
+			<section data-background-image="./images/gopherpin.gif">
 			</section>
 		</section>
 
 		<section>
-			<section>
-				<h2>"Special When Lit: Using Go to Bring a Pinball Machine Back to Life!"</h2>
-				<h3>Jeremy Fleitz</h3>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>"Freeze: A TinyGo-Powered Meeting Muter with a Twist"</h2>
-				<h3>Hari Bhaskaran</h3>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>You are here</h2>
-			</section>
+			<h2>You are here</h2>
 		</section>
 
 		<section>
